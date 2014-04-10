@@ -1,5 +1,5 @@
 <?php
-namespace Algorithms\DynamicProgramming\OptimalCuts;
+namespace Algorithms\Greedy\ActivityScheduling;
 
 $start = array(1, 3, 0, 5, 3, 5, 6, 8, 8, 2, 12); // set s_i of activity starting times
 // must sort by ascending order and maintain finish indice correlation (if not already sorted)
@@ -45,8 +45,6 @@ class ActivitySelection
             return !empty($finish) ? $this->recursiveActivitySelector($start, $finish, 0, count($finish)-1) : $this->a;
         }
     }
-
-
 }
 
 ?>
